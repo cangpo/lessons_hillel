@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lesson 2 Chess</title>
+<link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+  <div class="wrapper">
+  
+    <h1>Chess board</h1>
+
+    <p>
+      Start position: <br><br>
+      <label for="startX"> &uarr; X 
+        <input id="startX" type="number" name="startX" min="1" max="8">
+      </label> 
+      <label for="startY"> &rarr; Y 
+        <input id="startY" type="number" name="startY" min="1" max="8">
+      </label>
+    </p>
+
+    <p>
+      Move to: <br><br>
+      <label for="startX"> &uarr; X 
+        <input id="moveX" type="number" name="moveX" min="1" max="8" disabled>
+      </label>
+      <label for="startY"> &rarr; Y 
+        <input id="moveY" type="number" name="moveY" min="1" max="8" disabled>
+      </label>
+    </p>
+
+    <div id="result" class="result"></div>
+
+    <div id="chess" class="chess">
+      <div id="horse-step" class="horse-step"></div>
+      <div id="horse" class="horse"></div>
+    </div>
+    
+  </div>
+  
+  <script src="scripts/chess.js"></script>
+</body>
+</html>
