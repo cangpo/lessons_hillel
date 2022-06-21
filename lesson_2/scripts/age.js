@@ -5,7 +5,7 @@ let ageWord = 'років';
 
 if (ageNumber === 1 || ageNumber % 10 === 1 && ageNumber % 100 !== 11){
   ageWord = 'рік';
-} else if (ageNumber % 10 >= 2 && ageNumber % 10 <= 4 && ageNumber % 100 !== 11){
+} else if (ageNumber % 10 >= 2 && ageNumber % 10 <= 4 && ageNumber % 100 !== 11 && ageNumber <= 4){
   ageWord = 'роки';
 }
 
