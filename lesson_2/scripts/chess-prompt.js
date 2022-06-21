@@ -2,15 +2,17 @@ const horse = document.getElementById('horse');
 const horseStep = document.getElementById('horse-step');
 
 function MinMax(val){
-  if (val >= 1 && val <= 8){
-    return val;
+  if (typeof val === 'number' && Math.sign(val) !== -1) {
+    if (val && val >= 1 && val <= 8){
+      return Math.abs(val);
+    }
   }
 }
 
-let startX = MinMax(Math.abs(prompt('Enter start X')));
-let startY = MinMax(Math.abs(prompt('Enter start Y')));
-let moveX = MinMax(Math.abs(prompt('Enter move to X')));
-let moveY = MinMax(Math.abs(prompt('Enter move to Y')));
+let startX = MinMax(Number(prompt('Enter start X')));
+let startY = MinMax(Number(prompt('Enter start Y')));
+let moveX = MinMax(Number(prompt('Enter move to X')));
+let moveY = MinMax(Number(prompt('Enter move to Y')));
 
 if (startX && startY){
   let xMovePos = 0;

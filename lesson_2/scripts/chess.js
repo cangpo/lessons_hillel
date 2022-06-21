@@ -8,9 +8,11 @@ const moveX = document.getElementById('moveX');
 const moveY = document.getElementById('moveY');
 
 function MinMax(val){
-  if (val >= 1 && val <= 8){
-    return val;
-    result.innerHTML = '';
+  if (typeof val === 'number' && Math.sign(val) !== -1) {
+    if (val && val >= 1 && val <= 8){
+      return Math.abs(val);
+      result.innerHTML = '';
+    }
   } else {
     result.innerHTML = 'Enter number between 1 and 8';
   }
@@ -18,10 +20,10 @@ function MinMax(val){
 
 window.addEventListener('input', function(){
   
-    let startXval = MinMax(Math.abs(startX.value));
-    let startYval = MinMax(Math.abs(startY.value));
-    let moveXval = MinMax(Math.abs(moveX.value));
-    let moveYval = MinMax(Math.abs(moveY.value));
+    let startXval = MinMax(Number(startX.value));
+    let startYval = MinMax(Number(startY.value));
+    let moveXval = MinMax(Number(moveX.value));
+    let moveYval = MinMax(Number(moveY.value));
     
     if (startXval && startYval){
       let xStartPos = startXval;
