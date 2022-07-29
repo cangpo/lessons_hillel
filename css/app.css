@@ -1,0 +1,47 @@
+.app {
+    position: fixed;
+    z-index: 99999;
+    right: 16px;
+    bottom: 16px;
+    padding: 16px;
+    border: 1px solid #000;
+    background: #fff;
+}
+.app-title,
+.app-input {
+    padding: 0 0 16px 0;
+}
+.app-input input {
+    display: block;
+    box-sizing: border-box;
+    padding: 8px;
+    width: 100%;
+}
+.app-buttons {
+    display: flex;
+    flex-direction: row;
+    margin: -8px;
+    padding: 0 0 16px 0;
+}
+
+.app button {
+    flex: 1 1 auto;
+    margin: 8px;
+    padding: 4px 8px;
+    border: 1px solid #c7c7c7;
+}
+.app-reset {
+    margin: -8px;
+}
+
+.active-button {
+    border: 2px solid #000 !important;
+    font-weight: bold;
+}
+
+.matched {
+    border: 8px solid #ff0000 !important;
+    position: relative !important;
+    z-index: 99;
+    display: block !important;
+}
